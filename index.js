@@ -7,17 +7,16 @@ const input2 = document.querySelectorAll(".inputContainer>input")[1];
 const imageLink = [];
 let totalImage = 46;
 let startValue=1;
-let endValue;
+let endValue=46;
 for(let i=0;i<totalImage;i++){
     imageLink.push("AkariHiragana/Slide"+(i+2)+".JPG");
 }   
 
-let temp=-1;
 let index=-1;
 randomButton.addEventListener("click",()=>{  
     index=Math.floor(Math.random()*totalImage)
     if(totalImage==0){
-        imageElement.src="image/1.jpg";
+        imageElement.src="image/1.png";
     }else{
         imageElement.src=imageLink[index];
         imageLink.splice(index,1);
@@ -28,27 +27,21 @@ randomButton.addEventListener("click",()=>{
 
 input1.addEventListener("keyup",(e)=>{
     startValue = e.target.value;
-    console.log(startValue)
 })
 
 input2.addEventListener("keyup",(e)=>{
     endValue = e.target.value
-    console.log(endValue)
 })
 
 clickButton.addEventListener("click",()=>{
     if(isNaN(endValue) || isNaN(startValue)){
-        console.log("lkj")
-        window.navigator.vibrate(200);
         return;
     }
-    window.navigator.vibrate(2000);
     totalImage=endValue-startValue+1;
     imageLink.splice(0,imageLink.length)
     for(let i=parseInt(startValue);i<=parseInt(endValue);i++){
         const link = "AkariHiragana/Slide"+(i+1)+".JPG"
         imageLink.push(link);
-        console.log(link)
     }
     imageElement.src="image/Slide1.JPG";
 })
