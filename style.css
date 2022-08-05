@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #cde5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+button.randomBtn{
+    width: 6rem;
+    height: 2.5rem;
+    
+    
+}
+
+button.randomBtn:hover{
+    background-color: white;
+}
+
+button.randomBtn:hover .iconify{
+    font-size: 1.9rem;
+}
+
+.iconify{
+    font-size: 1.8rem;
+
+}
+
+
+.imageContainer{
+    width:30%;
+    display: flex;
+    align-items: center;
+}
+
+.image{
+    width: 100%;
+    border-radius: 3rem;
+    user-select: none;
+}
+
+.inputContainer{
+    position: absolute;
+    top: 0; 
+    right: 0;
+    margin-right: 10px;
+    
+}
+
+.inputContainer > input{
+    padding: .1rem;
+    width: 40px;
+    height: 20px
+}
+
+.inputContainer > div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inputContainer button{
+    padding: .4rem;
+    margin-top: .2rem;
+    border-radius: .4rem;
+    /* position: absolute;
+    right: 0; */
+}
+
+button{
+    border-radius: 10px;
+    border: 1px black solid;
+    cursor: pointer;
+    user-select: none;
+    padding: .3rem;
+    background-color: white;
+}
